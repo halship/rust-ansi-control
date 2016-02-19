@@ -45,7 +45,10 @@ pub fn move_line(n: i32) -> String {
 
 /// Sets the column of the cursor. (n: column)
 pub fn set_column(n: u32) -> String {
-    format!("")
+    if n == 0 {
+        return format!("\x1B[1G")
+    }
+    format!("\x1B[{}G", n)
 }
 
 /// Sets the position of the cursor. (i: row, j: column)
