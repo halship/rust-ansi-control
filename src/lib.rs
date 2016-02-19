@@ -36,7 +36,11 @@ pub fn move_cursor(i: i32, j: i32) -> String {
 /// If _n_ is a negative number, this function moves the cursor
 /// _|n|_ lines up.
 pub fn move_line(n: i32) -> String {
-    format!("")
+    match n.cmp(&0) {
+        Ordering::Less      => format!("\x1B[{}F", -n),
+        Ordering::Equal     => format!(""),
+        Ordering::Greater   => format!("\x1B[{}E", n),
+    }
 }
 
 /// Sets the column of the cursor. (n: column)
