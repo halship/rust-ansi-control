@@ -58,12 +58,12 @@ pub fn move_line(n: i32) -> String {
     }
 }
 
-/// Sets the column of the cursor. (n: column)
+/// Sets the column of the cursor. (_n_: column)
 pub fn set_column(n: u32) -> String {
     format!("\x1B[{}G", cmp::max(1, n))
 }
 
-/// Sets the position of the cursor. (i: row, j: column)
+/// Sets the position of the cursor. (_i_: row, _j_: column)
 pub fn set_position(i: u32, j: u32) -> String {
     format!("\x1B[{};{}H", cmp::max(1, i), cmp::max(1, j))
 }
