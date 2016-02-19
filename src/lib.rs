@@ -76,7 +76,7 @@ pub fn clear_display(pos: Pos) -> String {
 /// cursor to beginning of the line. If pos is Pos::Both, clear
 /// entire line.
 pub fn clear_line(pos: Pos) -> String {
-    format!("")
+    format!("\x1B[{}K", pos.num())
 }
 
 /// Scroll whole page up by _n_ lines. If _n_ is a negative
