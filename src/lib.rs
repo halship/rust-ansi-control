@@ -7,6 +7,8 @@
 //!     use ansi_control::*;
 //! 
 
+use std::cmp::Ordering;
+
 /// A Pos is position of clearing (display|line) from cursor.
 pub enum Pos {
     Back,
@@ -17,7 +19,17 @@ pub enum Pos {
 /// Moves the cursor _i_ (row), _j_ (column) cells. If the cursor
 /// is already at the edge of the screen, this has no effect.
 pub fn move_cursor(i: i32, j: i32) -> String {
-    format!("")
+    let code0 = match i.cmp(&0) {
+        Ordering::Less      => format!("\x1B[{}B", -i),
+        Ordering::Equal     => format!(""),
+        Ordering::Greater   => format!("\x1B[{}A", i),
+    };
+    let code1 = match j.cmp(&0) {
+        Ordering::Less      => format!("\x1B[{}D", -j),
+        Ordering::Equal     => format!(""),
+        Ordering::Greater   => format!("\x1B[{}C", j),
+    };
+    format!("{}{}", code0, code1)
 }
 
 /// Moves the cursor to beginning of the line _n_ lines down.
