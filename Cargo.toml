@@ -6,6 +6,7 @@ authors = ["halship <gship@hotmail.co.jp>"]
 
 homepage = "https://github.com/halship/rust-ansi-control"
 documentation = "http://halship.github.io/rust-ansi-control/ansi_control/"
+repository = "https://github.com/halship/rust-ansi-control"
 
 license = "MIT"
 license-file = "LICENSE"
