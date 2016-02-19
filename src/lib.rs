@@ -5,6 +5,11 @@
 //! ## Example
 //! 
 //!     use ansi_control::*;
+//!     
+//!     println!("test 0");
+//!     print!("{}", set_column(1));
+//!     println!("test 1");
+//!     print!("{}", clear_display(Pos::Both));
 //! 
 
 use std::cmp::{self, Ordering};
