@@ -7,6 +7,34 @@
 //!     use ansi_control::*;
 //! 
 
+pub fn move_cursor(i: i32, j: i32) -> String {
+    ""
+}
+
+pub fn move_line(n: i32) -> String {
+    ""
+}
+
+pub fn set_column(n: u32) -> String {
+    ""
+}
+
+pub fn set_position(i: u32, j: u32) -> String {
+    ""
+}
+
+pub fn clear_display(pos: Pos) -> String {
+    ""
+}
+
+pub fn clear_line(pos: Pos) -> String {
+    ""
+}
+
+pub fn scroll(n: i32) -> String {
+    ""
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
