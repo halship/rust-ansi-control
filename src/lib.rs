@@ -16,6 +16,16 @@ pub enum Pos {
     Both,
 }
 
+impl Pos {
+    fn num(&self) -> u32 {
+        match *self {
+            Pos::Back   => 0,
+            Pos::Front  => 1,
+            Pos::Both   => 2,
+        }
+    }
+}
+
 /// Moves the cursor _i_ (row), _j_ (column) cells. If the cursor
 /// is already at the edge of the screen, this has no effect.
 pub fn move_cursor(i: i32, j: i32) -> String {
