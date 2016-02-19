@@ -7,32 +7,39 @@
 //!     use ansi_control::*;
 //! 
 
+/// a Pos is position of clearing (display|line) from cursor.
+pub enum Pos {
+    Back,
+    Front,
+    Both,
+}
+
 pub fn move_cursor(i: i32, j: i32) -> String {
-    ""
+    format!("")
 }
 
 pub fn move_line(n: i32) -> String {
-    ""
+    format!("")
 }
 
 pub fn set_column(n: u32) -> String {
-    ""
+    format!("")
 }
 
 pub fn set_position(i: u32, j: u32) -> String {
-    ""
+    format!("")
 }
 
 pub fn clear_display(pos: Pos) -> String {
-    ""
+    format!("")
 }
 
 pub fn clear_line(pos: Pos) -> String {
-    ""
+    format!("")
 }
 
 pub fn scroll(n: i32) -> String {
-    ""
+    format!("")
 }
 
 #[cfg(test)]
