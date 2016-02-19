@@ -68,12 +68,7 @@ pub fn set_position(i: u32, j: u32) -> String {
 /// cursor to beginning of the screen. If pos is Pos::Both, clear
 /// entire screen.
 pub fn clear_display(pos: Pos) -> String {
-    let num = match pos {
-        Pos::Back   => 0,
-        Pos::Front  => 1,
-        Pos::Both   => 2,
-    };
-    format!("\x1B[{}J", num)
+    format!("\x1B[{}J", pos.num())
 }
 
 /// Clears part of line. If pos is Pos::Back, clear from cursor
