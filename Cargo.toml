@@ -6,8 +6,8 @@ authors = ["halship <gship@hotmail.co.jp>"]
 
 homepage = "https://github.com/halship/rust-ansi-control"
 
-license = MIT
-license-file = LICENSE
-readme = README.md
+license = "MIT"
+license-file = "LICENSE"
+readme = "README.md"
 
 [dependencies]
