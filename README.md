@@ -1,6 +1,8 @@
 # rust-ansi-control
 This is a library for controlling cursor and screen on ANSI terminals.
 
+### [Documentation](http://halship.github.io/rust-ansi-control/ansi_control/)
+
 
 ## Example
 
