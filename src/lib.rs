@@ -50,7 +50,7 @@ pub fn set_column(n: u32) -> String {
 
 /// Sets the position of the cursor. (i: row, j: column)
 pub fn set_position(i: u32, j: u32) -> String {
-    format!("")
+    format!("\x1B[{};{}H", cmp::max(1, i), cmp::max(1, j))
 }
 
 /// Clears part of screen. If pos is Pos::Back, clear from cursor
