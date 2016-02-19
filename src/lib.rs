@@ -82,7 +82,11 @@ pub fn clear_line(pos: Pos) -> String {
 /// Scroll whole page up by _n_ lines. If _n_ is a negative
 /// number, this function scroll whole page down by _|n|_ lines.
 pub fn scroll(n: i32) -> String {
-    format!("")
+    match n.cmp(&0) {
+        Ordering::Less      => format!("\x1B[{}T", -n),
+        Ordering::Equal     => format!(""),
+        Ordering::Greater   => format!("\x1B[{}S", n),
+    }
 }
 
 #[cfg(test)]
