@@ -1,5 +1,5 @@
 # rust-ansi-control
-rust-ansi-control is the library controlling cursor and screen in terminal.
+This is a library for controlling cursor and screen on ANSI terminals.
 
 
 ## Example
