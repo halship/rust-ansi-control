@@ -7,37 +7,54 @@
 //!     use ansi_control::*;
 //! 
 
-/// a Pos is position of clearing (display|line) from cursor.
+/// A Pos is position of clearing (display|line) from cursor.
 pub enum Pos {
     Back,
     Front,
     Both,
 }
 
+/// Moves the cursor _i_ (row), _j_ (column) cells. If the cursor
+/// is already at the edge of the screen, this has no effect.
 pub fn move_cursor(i: i32, j: i32) -> String {
     format!("")
 }
 
+/// Moves the cursor to beginning of the line _n_ lines down.
+/// If _n_ is a negative number, this function moves the cursor
+/// _|n|_ lines up.
 pub fn move_line(n: i32) -> String {
     format!("")
 }
 
+/// Sets the column of the cursor. (n: column)
 pub fn set_column(n: u32) -> String {
     format!("")
 }
 
+/// Sets the position of the cursor. (i: row, j: column)
 pub fn set_position(i: u32, j: u32) -> String {
     format!("")
 }
 
+/// Clears part of screen. If pos is Pos::Back, clear from cursor
+/// to the end of the screen. If pos is Pos::Front, clear from
+/// cursor to beginning of the screen. If pos is Pos::Both, clear
+/// entire screen.
 pub fn clear_display(pos: Pos) -> String {
     format!("")
 }
 
+/// Clears part of line. If pos is Pos::Back, clear from cursor
+/// to the end of the line. If pos is Pos::Front, clear from
+/// cursor to beginning of the line. If pos is Pos::Both, clear
+/// entire line.
 pub fn clear_line(pos: Pos) -> String {
     format!("")
 }
 
+/// Scroll whole page up by _n_ lines. If _n_ is a negative
+/// number, this function scroll whole page down by _|n|_ lines.
 pub fn scroll(n: i32) -> String {
     format!("")
 }
